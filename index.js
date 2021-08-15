@@ -155,4 +155,5 @@ if(score===15)
    highScores.map(score => console.log(score.name, ":",score.score));
    
 //to make it better--
+// add options to questions
 //make a medal with stars corresponding to colour of bronze,silver and gold if they have beaten the highscore 
