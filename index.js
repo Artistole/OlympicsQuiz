@@ -6,9 +6,10 @@ score=0;
 var name = readlineSync.question("What is your name? "); // name input
 log("Welcome "+name+"!")
 log("Let us see how much you know about Olympics 2020")
-log("---------")
+log("---")
 log("Instructions:")
-log("There are 3 levels and you will be able to proceed to the next level if you get all the answers of previous level correct");
+log("There are 3 levels and you will be able to proceed to the next level if you get all the answers of previous level correct. Each level has 5 questions so 15 questions in total");
+log("---")
 
 //function 
 
@@ -18,12 +19,14 @@ function play(question,answer)
   if(ans === answer)
   {
     log(chalk.green("Your answer is correct"));
+    console.log("---")
     score++
   }
   else
   {
     log(chalk.red("Your answer is wrong"));
     console.log("The correct answer is: " + answer);
+    console.log("---")
     score--
   }
   log(chalk.hex('#7D3C98')("Your current score is "+ score));
@@ -150,9 +153,13 @@ if(score===15)
    {
      log(chalk.bgHex('#FFD700')("Congratulations! You have answered all the questions correctly"))
     }
-
+function scores()
+{
    console.log("check out the high scores:")
    highScores.map(score => console.log(score.name, ":",score.score));
+}
+
+scores();
    
 //to make it better--
 // add options to questions
